@@ -3,119 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAVG Nails</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Beautiful custom nails by SAVG Nails — book your appointment today.">
+    <title>SAVG Nails | Custom Nail Designs & Appointments</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Pangolin&display=swap" rel="stylesheet">
     <style>
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 100px;
         }
-
         body {
-            background-color: #1a1a1a;
-            font-family: 'Quicksand', sans-serif;
-            color: #fff;
+            background-color: #111;
+            font-family: 'Pangolin', sans-serif;
+            color: white;
             margin: 0;
-            padding: 0;
         }
-
         header {
             text-align: center;
-            padding: 20px;
-            background-color: #ff1e8a;
-            color: white;
-            box-shadow: 0 4px 20px rgba(255, 30, 138, 0.6);
+            background: linear-gradient(90deg, hotpink, #ff1e8a, #ff007f);
+            padding-top: 10px;
+            box-shadow: 0 4px 15px rgba(255, 0, 128, 0.5);
         }
-
         nav {
-            margin-bottom: 10px;
+            padding: 10px 0;
         }
-
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
-            font-size: 1.1em;
-            transition: color 0.2s ease;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            font-family: 'Bangers', cursive;
+            letter-spacing: 1px;
         }
-
         nav a:hover {
-            color: #00f0ff;
+            color: #39ff14; /* neon green */
+            text-shadow: 0 0 5px #39ff14;
         }
-
         h1 {
             font-family: 'Bangers', cursive;
             font-size: 3.5em;
-            margin: 0;
-            letter-spacing: 2px;
+            margin: 10px 0;
+            color: white;
+            text-shadow: 0 0 10px hotpink, 0 0 20px #ff1e8a;
         }
-
         .gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
             padding: 20px;
         }
-
         .gallery img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
+            height: 200px;
+            width: auto;
             border-radius: 10px;
-            box-shadow: 0 0 10px #ff1e8a;
+            object-fit: cover;
+            border: 3px solid hotpink;
+            box-shadow: 0 0 15px rgba(255, 20, 147, 0.7);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         .gallery img:hover {
-            transform: rotate(-3deg) scale(1.05);
-            box-shadow: 0 0 20px #00f0ff;
+            transform: rotate(-2deg) scale(1.05);
+            box-shadow: 0 0 20px #39ff14, 0 0 40px hotpink;
         }
-
         .services {
             padding: 20px;
             text-align: center;
-            background-color: #222;
-            border-top: 3px solid #ff1e8a;
-            border-bottom: 3px solid #00f0ff;
         }
-
         .services h2 {
             font-family: 'Bangers', cursive;
             font-size: 2.5em;
+            color: hotpink;
+            text-shadow: 0 0 5px #ff1e8a;
             margin-bottom: 10px;
-            color: #ff1e8a;
         }
-
         .services ul {
             list-style-type: none;
             padding: 0;
-            font-size: 1.2em;
+            font-size: 1.3em;
         }
-
         .services li {
             margin: 8px 0;
         }
-
         .contact {
             text-align: center;
             padding: 20px;
-            background-color: #ff1e8a;
+            background: linear-gradient(90deg, #ff007f, hotpink);
             color: white;
-            box-shadow: 0 -4px 20px rgba(255, 30, 138, 0.6);
+            text-shadow: 0 0 5px black;
         }
-
-        .contact h2 {
-            font-family: 'Bangers', cursive;
-            font-size: 2em;
-            color: #fff;
-            text-shadow: 0 0 10px #00f0ff;
-        }
-
         .contact a {
-            color: #00f0ff;
-            text-decoration: underline;
+            color: #39ff14;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            color: white;
+            text-shadow: 0 0 5px hotpink;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            .services ul {
+                font-size: 1.1em;
+            }
         }
     </style>
 </head>
@@ -129,27 +122,27 @@
         <h1>SAVG Nails 💅</h1>
     </header>
 
-    <div id="gallery" class="gallery">
-        <img src="images/IMG_1836.jpeg" alt="Nail Design 1">
-        <img src="images/nail2.jpg" alt="Nail Design 2">
-        <img src="images/nail3.jpg" alt="Nail Design 3">
-    </div>
+    <main>
+        <div id="gallery" class="gallery">
+            <img src="images/IMG_1836.jpeg" alt="Light pink nails with glitter accent">
+            <img src="images/IMG_1843.jpeg" alt="Glossy red nails with rhinestone detail">
+            <img src="images/IMG_1889.jpeg" alt="Matte pastel nails with floral art">
+        </div>
 
-    <section id="services" class="services">
-        <h2>💥 Services & Prices 💥</h2>
-        <ul>
-            <li>Full Set – $50</li>
-            <li>Fill – $35</li>
-            <li>Gel Polish – $25</li>
-            <li>Custom Nail Art – Starting at $10</li>
-        </ul>
-    </section>
+        <section id="services" class="services">
+            <h2>Services</h2>
+            <ul>
+                <li>Acrylic Full Set</li>
+                <li>Soft Gel Extensions</li>
+                <li>No Chip Manicure/Pedicure</li>
+                <li>Custom Nail Art</li>
+            </ul>
+        </section>
 
-    <section id="contact" class="contact">
-        <h2>💌 Book With Me 💌</h2>
-        <p>DM me on Instagram: <a href="https://instagram.com/yourhandle" target="_blank">@yourhandle</a></p>
-        <p>Or text me: (555) 123-4567</p>
-    </section>
+        <section id="contact" class="contact">
+            <h2>Book With Me</h2>
+            <p>DM me on Instagram: <a href="https://instagram.com/siendog" target="_blank">@siendog</a></p>
+        </section>
+    </main>
 </body>
 </html>
-
