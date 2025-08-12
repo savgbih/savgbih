@@ -7,9 +7,7 @@
     <title>SAVG Nails | Custom Nail Designs & Appointments</title>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Pangolin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
 
 <style>
 html {
@@ -18,7 +16,7 @@ html {
 }
 
 body {
-background: linear-gradient(135deg, #9A031E, #9A031E, #FFBA49);
+    background: linear-gradient(135deg, #9A031E, #9A031E, #FFBA49);
     font-family: 'Montserrat', sans-serif;
     color: #F72798;
     margin: 0;
@@ -36,6 +34,9 @@ header {
 nav {
     background-color: #F72798;
     padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav a {
@@ -51,12 +52,14 @@ nav a:hover {
 }
 
 h1 {
-
-  font-family: "Rubik Glitch", system-ui;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    font-style: normal;
     font-size: 6.5rem;
+}
 
+h2 {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
 .gallery {
@@ -67,53 +70,27 @@ h1 {
     padding: 20px;
 }
 
-.gallery img {
-    height: 180px;
-    width: auto;
+.gallery-item {
+    text-align: center;
+    color: white;
+    max-width: 200px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.2s ease-in-out;
 }
 
-.gallery img:hover {
+.gallery-item img:hover {
     transform: scale(1.03);
 }
 
 .services {
     padding: 20px;
     text-align: center;
-}
-
-.services h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-/* Match HTML class */
-.services-menu {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 15px;
-    flex-wrap: wrap;
-}
-
-.services-menu a {
-    color: #F72798;
-    font-weight: bold;
-    font-size: 1.2em;
-    text-decoration: none;
-    background: white;
-    padding: 8px 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: background 0.2s, transform 0.2s;
-}
-
-.services-menu a:hover {
-    background: #F72798;
-    color: white;
-    transform: scale(1.05);
 }
 
 .contact {
@@ -133,68 +110,107 @@ h1 {
     h1 {
         font-size: 2em;
     }
-    .services-menu a {
-        font-size: 1em;
-    }
-    contact {
+    .contact {
         font-size: 1em;
     }
 }
 </style>
-
-
 </head>
 <body>
     <header>
         <nav>
-            <a href="#gallery">Nails</a>
-            <a href="#services">Services</a>
+            <a href="#acrylic">Acrylic</a>
+            <a href="#gel">Gel</a>
+            <a href="#manipedi">No Chip Mani/Pedi</a>
+            <a href="#art">Custom Nail Art</a>
             <a href="#contact">Contact</a>
-            <a href="school.html">One Stop Beauty School</a>
-
+            <a href="school.html">My Nail School Journey</a>
         </nav>
-        <h1>SAVG Nails </h1>
+        <h1>SAVG Nails</h1>
     </header>
 
     <main>
-    <section id="contact" class="contact">
+        <!-- Acrylic Section -->
+        <section id="acrylic" class="services">
+            <h2>Acrylic</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/IMG_1473 - Edited.jpg" alt="Full Set Acrylic">
+                    <p>Full Set</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1722 - Edited.jpg" alt="Dip over natural nails">
+                    <p>Dip over natural nails</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1758 - Edited.jpg" alt="Full Set Acrylic">
+                    <p>Full Set</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gel Section -->
+        <section id="gel" class="services">
+            <h2>Gel</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/IMG_1637 - Edited.jpg" alt="Gel X">
+                    <p>Gel X</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1836 - Edited.jpg" alt="Soft gel overlay">
+                    <p>Soft gel overlay</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1638 - Edited.jpg" alt="Gel X">
+                    <p>Gel X</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1889 - Edited.jpg" alt="Soft gel overlay">
+                    <p>Soft gel overlay</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mani/Pedi Section -->
+        <section id="manipedi" class="services">
+            <h2>No Chip Mani/Pedi</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/IMG_1763 - Edited.jpg" alt="No chip manicure">
+                    <p>No chip manicure</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1772 - Edited.jpg" alt="No chip pedicure">
+                    <p>No chip pedicure</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1604 - Edited.jpg" alt="No chip manicure">
+                    <p>No chip manicure</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Art Section -->
+        <section id="art" class="services">
+            <h2>Custom Nail Art</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/IMG_1781 - Edited.jpg" alt="No chip manicure art">
+                    <p>No chip manicure</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1843.jpeg" alt="Soft gel overlay art">
+                    <p>Soft gel overlay</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
             <h2>Book With Me</h2>
             <p>DM me on Instagram: <a href="https://instagram.com/siendog" target="_blank">@siendog</a></p>
         </section>
-
-    <section id="services" class="services">
-    <h2>Services</h2>
-    <div class="services-menu">
-        <a href="acrylic.html">Acrylic Full Set</a>
-        <a href="gel.html">Soft Gel Extensions</a>
-        <a href="manipedi.html">No Chip Mani/Pedi</a>
-        <a href="art.html">Custom Nail Art</a>
-    </div>
-</section>
-
-       <div id="gallery" class="gallery"
-    <!-- Row 1 -->
-    <img src="images/IMG_1836.jpeg" alt="Light pink nails with glitter accent">
-    <img src="images/IMG_1843.jpeg" alt="Glossy red nails with rhinestone detail">
-    <img src="images/IMG_1889.jpeg" alt="Matte pastel nails with floral art">
-
-    <!-- Row 2 -->
-    <img src="images/IMG_1473 - Edited.jpg" alt="Black and gold edgy nails">
-    <img src="images/IMG_1604 - Edited.jpg" alt="Neon pink nails with bold art">
-    <img src="images/IMG_1637 - Edited.jpg" alt="Deep red nails with glossy finish">
-
-    <!-- Row 3 -->
-    <img src="images/IMG_1638 - Edited.jpg" alt="Bright blue nails with sparkle">
-    <img src="images/IMG_1722 - Edited.jpg" alt="Matte black nails with minimal art">
-    <img src="images/IMG_1758 - Edited.jpg" alt="Colorful ombré nails">
-
-    <!-- Row 4 -->
-    <img src="images/IMG_1763 - Edited.jpg" alt="Shiny nude nails with gems">
-    <img src="images/IMG_1772 - Edited.jpg" alt="Abstract neon nail art">
-    <img src="images/IMG_1781 - Edited.jpg" alt="Vibrant orange summer nails">
-</div>
-
-       
     </main>
 </body>
 </html>
