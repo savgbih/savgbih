@@ -6,111 +6,112 @@
     <meta name="description" content="Beautiful custom nails by SAVG Nails — book your appointment today.">
     <title>SAVG Nails | Custom Nail Designs & Appointments</title>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Pangolin&display=swap" rel="stylesheet">
-    <style>
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 100px;
-        }
-        body {
-            background-color: #111;
-            font-family: 'Pangolin', sans-serif;
-            color: white;
-            margin: 0;
-        }
-        header {
-            text-align: center;
-            background: linear-gradient(90deg, hotpink, #ff1e8a, #ff007f);
-            padding-top: 10px;
-            box-shadow: 0 4px 15px rgba(255, 0, 128, 0.5);
-        }
-        nav {
-            padding: 10px 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 1.2em;
-            text-transform: uppercase;
-            font-family: 'Bangers', cursive;
-            letter-spacing: 1px;
-        }
-        nav a:hover {
-            color: #39ff14; /* neon green */
-            text-shadow: 0 0 5px #39ff14;
-        }
+<style>
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px; /* space so header doesn't cover section */
+    }
+    body {
+        background-color: #ffe4e1;
+        font-family: 'Pangolin', sans-serif;
+        color: #222;
+        margin: 0;
+    }
+    header {
+        text-align: center;
+        background-color: hotpink;
+        color: white;
+        padding-top: 10px;
+    }
+    nav {
+        background-color: hotpink;
+        padding: 10px 0;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    h1 {
+        font-family: 'Gloria Hallelujah', cursive;
+        font-size: 3em;
+        margin: 10px 0;
+    }
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    .gallery img {
+        height: 180px;
+        width: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .gallery img:hover {
+        transform: scale(1.03);
+    }
+    .services {
+        padding: 20px;
+        text-align: center;
+    }
+    .services h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    /* NEW — horizontal services menu */
+    .services-nav {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 15px;
+        flex-wrap: wrap;
+    }
+    .services-nav a {
+        color: hotpink;
+        font-weight: bold;
+        font-size: 1.2em;
+        text-decoration: none;
+        background: white;
+        padding: 8px 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        transition: background 0.2s, transform 0.2s;
+    }
+    .services-nav a:hover {
+        background: hotpink;
+        color: white;
+        transform: scale(1.05);
+    }
+
+    .contact {
+        text-align: center;
+        padding: 20px;
+        background-color: hotpink;
+        color: white;
+    }
+    .contact a {
+        color: white;
+        text-decoration: underline;
+    }
+    @media (max-width: 600px) {
         h1 {
-            font-family: 'Bangers', cursive;
-            font-size: 3.5em;
-            margin: 10px 0;
-            color: white;
-            text-shadow: 0 0 10px hotpink, 0 0 20px #ff1e8a;
+            font-size: 2em;
         }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
+        .services-nav a {
+            font-size: 1em;
         }
-        .gallery img {
-            height: 200px;
-            width: auto;
-            border-radius: 10px;
-            object-fit: cover;
-            border: 3px solid hotpink;
-            box-shadow: 0 0 15px rgba(255, 20, 147, 0.7);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .gallery img:hover {
-            transform: rotate(-2deg) scale(1.05);
-            box-shadow: 0 0 20px #39ff14, 0 0 40px hotpink;
-        }
-        .services {
-            padding: 20px;
-            text-align: center;
-        }
-        .services h2 {
-            font-family: 'Bangers', cursive;
-            font-size: 2.5em;
-            color: hotpink;
-            text-shadow: 0 0 5px #ff1e8a;
-            margin-bottom: 10px;
-        }
-        .services ul {
-            list-style-type: none;
-            padding: 0;
-            font-size: 1.3em;
-        }
-        .services li {
-            margin: 8px 0;
-        }
-        .contact {
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(90deg, #ff007f, hotpink);
-            color: white;
-            text-shadow: 0 0 5px black;
-        }
-        .contact a {
-            color: #39ff14;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .contact a:hover {
-            color: white;
-            text-shadow: 0 0 5px hotpink;
-        }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2.5em;
-            }
-            .services ul {
-                font-size: 1.1em;
-            }
-        }
-    </style>
+    }
+</style>
+
 </head>
 <body>
     <header>
@@ -123,7 +124,22 @@
     </header>
 
     <main>
-       <div id="gallery" class="gallery">
+    <section id="contact" class="contact">
+            <h2>Book With Me</h2>
+            <p>DM me on Instagram: <a href="https://instagram.com/siendog" target="_blank">@siendog</a></p>
+        </section>
+
+    <section id="services" class="services">
+    <h2>Services</h2>
+    <div class="services-menu">
+        <a href="acrylic.html">Acrylic Full Set</a>
+        <a href="gel.html">Soft Gel Extensions</a>
+        <a href="manipedi.html">No Chip Mani/Pedi</a>
+        <a href="art.html">Custom Nail Art</a>
+    </div>
+</section>
+
+       <div id="gallery" class="gallery"
     <!-- Row 1 -->
     <img src="images/IMG_1836.jpeg" alt="Light pink nails with glitter accent">
     <img src="images/IMG_1843.jpeg" alt="Glossy red nails with rhinestone detail">
@@ -145,20 +161,7 @@
     <img src="images/IMG_1781 - Edited.jpg" alt="Vibrant orange summer nails">
 </div>
 
-        <section id="services" class="services">
-            <h2>Services</h2>
-            <ul>
-                <li>Acrylic Full Set</li>
-                <li>Soft Gel Extensions</li>
-                <li>No Chip Manicure/Pedicure</li>
-                <li>Custom Nail Art</li>
-            </ul>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>Book With Me</h2>
-            <p>DM me on Instagram: <a href="https://instagram.com/siendog" target="_blank">@siendog</a></p>
-        </section>
+       
     </main>
 </body>
 </html>
