@@ -76,7 +76,7 @@
         <h1>SAVG Nails 💅</h1>
     </header>
 
-    <div class="gallery">
+    <div id="gallery" class="gallery">
         <!-- Add your nail photos here -->
         <img src="images/IMG_1836.jpeg" alt="">
         <img src="images/IMG_1889.jpeg" alt="">
