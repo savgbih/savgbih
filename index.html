@@ -70,9 +70,9 @@ h2 {
     padding: 20px;
 }
 
+
 .gallery-item {
-    text-align: center;
-    color: white;
+    position: relative;
     max-width: 200px;
 }
 
@@ -86,6 +86,17 @@ h2 {
 
 .gallery-item img:hover {
     transform: scale(1.03);
+}
+
+.gallery-item .caption {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.85em;
+    border-radius: 5px;
 }
 
 .services {
@@ -124,27 +135,31 @@ h2 {
             <a href="#manipedi">No Chip Mani/Pedi</a>
             <a href="#art">Custom Nail Art</a>
             <a href="#contact">Contact</a>
-            <a href="school.html">My Nail School Journey</a>
+            <a href="school.html">One Stop Beauty School</a>
         </nav>
         <h1>SAVG Nails</h1>
     </header>
 
-    <main>
+   <main>
+         <section id="contact" class="contact">
+            <h2>Book With Me</h2>
+            <p>DM me on Instagram: <a href="https://instagram.com/siendog" target="_blank">@siendog</a></p>
+        </section>
         <!-- Acrylic Section -->
         <section id="acrylic" class="services">
             <h2>Acrylic</h2>
             <div class="gallery">
                 <div class="gallery-item">
                     <img src="images/IMG_1473 - Edited.jpg" alt="Full Set Acrylic">
-                    <p>Full Set</p>
+                    <span class="caption">Full Set</span>
                 </div>
                 <div class="gallery-item">
                     <img src="images/IMG_1722 - Edited.jpg" alt="Dip over natural nails">
-                    <p>Dip over natural nails</p>
+                    <span class="caption">Dip over natural nails</span>
                 </div>
                 <div class="gallery-item">
                     <img src="images/IMG_1758 - Edited.jpg" alt="Full Set Acrylic">
-                    <p>Full Set</p>
+                    <span class="caption">Full Set</span>
                 </div>
             </div>
         </section>
@@ -155,19 +170,19 @@ h2 {
             <div class="gallery">
                 <div class="gallery-item">
                     <img src="images/IMG_1637 - Edited.jpg" alt="Gel X">
-                    <p>Gel X</p>
+                    <span class="caption">Gel X</span>
                 </div>
                 <div class="gallery-item">
                     <img src="images/IMG_1836 - Edited.jpg" alt="Soft gel overlay">
-                    <p>Soft gel overlay</p>
+                    <span class="caption">Soft gel overlay</span>
                 </div>
                 <div class="gallery-item">
                     <img src="images/IMG_1638 - Edited.jpg" alt="Gel X">
-                    <p>Gel X</p>
+                    <span class="caption">Gel X</span>
                 </div>
                 <div class="gallery-item">
                     <img src="images/IMG_1889 - Edited.jpg" alt="Soft gel overlay">
-                    <p>Soft gel overlay</p>
+                    <span class="caption">Soft gel overlay</span>
                 </div>
             </div>
         </section>
@@ -178,15 +193,15 @@ h2 {
             <div class="gallery">
                 <div class="gallery-item">
                     <img src="images/IMG_1763 - Edited.jpg" alt="No chip manicure">
-                    <p>No chip manicure</p>
+                    <span class="caption">No chip manicure</span>
                 </div>
                 <div class="gallery-item">
                     <img src="images/IMG_1772 - Edited.jpg" alt="No chip pedicure">
-                    <p>No chip pedicure</p>
+                    <span class="caption">No chip pedicure</span>
                 </div>
                 <div class="gallery-item">
                     <img src="images/IMG_1604 - Edited.jpg" alt="No chip manicure">
-                    <p>No chip manicure</p>
+                    <span class="caption">No chip manicure</span>
                 </div>
             </div>
         </section>
@@ -197,20 +212,17 @@ h2 {
             <div class="gallery">
                 <div class="gallery-item">
                     <img src="images/IMG_1781 - Edited.jpg" alt="No chip manicure art">
-                    <p>No chip manicure</p>
+                    <span class="caption">No chip manicure</span>
                 </div>
                 <div class="gallery-item">
                     <img src="images/IMG_1843.jpeg" alt="Soft gel overlay art">
-                    <p>Soft gel overlay</p>
+                    <span class="caption">Soft gel overlay</span>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <h2>Book With Me</h2>
-            <p>DM me on Instagram: <a href="https://instagram.com/siendog" target="_blank">@siendog</a></p>
-        </section>
+      
     </main>
 </body>
 </html>
