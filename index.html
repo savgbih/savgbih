@@ -6,116 +6,129 @@
     <meta name="description" content="Beautiful custom nails by SAVG Nails — book your appointment today.">
     <title>SAVG Nails | Custom Nail Designs & Appointments</title>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Pangolin&display=swap" rel="stylesheet">
-    <link href="https://api.fontshare.com/v2/css?f[]=Array@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-    html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 100px; /* space so header doesn't cover section */
-    }
-    body {
-        background-color: linear-gradient(135deg, #ff69b4, #ffc3a0);
-        font-family: 'Pangolin', sans-serif;
-        color: #222;
-        margin: 0;
-    }
-    header {
-        text-align: center;
-        background-color: rgba(255, 105, 180, 0.8); /* semi-transparent hot pink */
-  backdrop-filter: blur(5px);
-        color: white;
-        padding-top: 10px;
-    }
-    nav {
-        background-color: hotpink;
-        padding: 10px 0;
-    }
-    section{
-        background: transparent;
-    }
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-        font-size: 1.1em;
-    }
-    nav a:hover {
-        text-decoration: underline;
-    }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    background: linear-gradient(135deg, #ff69b4, #ffc3a0);
+    font-family: 'Montserrat', sans-serif;
+    color: #222;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    background-color: rgba(255, 105, 180, 0.8);
+    backdrop-filter: blur(5px);
+    color: white;
+    padding-top: 10px;
+}
+
+nav {
+    background-color: hotpink;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery img {
+    height: 180px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+.services {
+    padding: 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Match HTML class */
+.services-menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.services-menu a {
+    color: hotpink;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
+    background: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.services-menu a:hover {
+    background: hotpink;
+    color: white;
+    transform: scale(1.05);
+}
+
+.contact {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    color: hotpink;
+}
+
+.contact a {
+    color: hotpink;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
     h1 {
-        font-family: 'Array', sans-serif;
-
-    }
-    .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        padding: 20px;
-    }
-    .gallery img {
-        height: 180px;
-        width: auto;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-    .gallery img:hover {
-        transform: scale(1.03);
-    }
-    .services {
-        padding: 20px;
-        text-align: center;
-    }
-    .services h2 {
         font-size: 2em;
-        margin-bottom: 10px;
     }
-
-    /* NEW — horizontal services menu */
-    .services-nav {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin-top: 15px;
-        flex-wrap: wrap;
+    .services-menu a {
+        font-size: 1em;
     }
-    .services-nav a {
-        color: hotpink;
-        font-weight: bold;
-        font-size: 1.2em;
-        text-decoration: none;
-        background: white;
-        padding: 8px 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        transition: background 0.2s, transform 0.2s;
-    }
-    .services-nav a:hover {
-        background: hotpink;
-        color: white;
-        transform: scale(1.05);
-    }
-
-    .contact {
-        text-align: center;
-        padding: 20px;
-        background-color: white;
-        color: hotpink;
-    }
-    .contact a {
-        color: hotpink;
-        text-decoration: underline;
-    }
-    @media (max-width: 600px) {
-        h1 {
-            font-size: 2em;
-        }
-        .services-nav a {
-            font-size: 1em;
-        }
-    }
+}
 </style>
+
 
 </head>
 <body>
