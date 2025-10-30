@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SAVG Nail Art — nail designs you want.">
+  <title>SAVG Nails | Nail Art</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #9A031E, #F72798, #FFBA49);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Rubik Glitch', system-ui;
+      font-size: 4rem;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 40px 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      max-width: 240px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .caption {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      color: white;
+      font-size: 0.9rem;
+      text-shadow: 
+        1px 1px 2px black, 
+        -1px -1px 2px black;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="book.html">Book at Glo</a>
+      <a href="savg.html">A SAVG Bih</a>
+    </nav>
+    <h1>Nail Art</h1>
+  </header>
+
+  <main>
+    <section class="gallery">
+      <!-- 🖼️ Add your new nail art photos here -->
+      <div class="gallery-item">
+        <img src="images/new1.jpg" alt="Custom Set 1">
+        <span class="caption">Custom Set 1</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/new2.jpg" alt="Custom Set 2">
+        <span class="caption">Chrome French</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/new3.jpg" alt="Custom Set 3">
+        <span class="caption">3D Details</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/new4.jpg" alt="Custom Set 4">
+        <span class="caption">Freestyle</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 SAVG Nails — Nail Art by Sienna Grace
+  </footer>
+</body>
+</html>
