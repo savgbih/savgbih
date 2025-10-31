@@ -24,27 +24,33 @@
 
     @font-face {
       font-family: 'Lordish-Regular';
-      src: url('fonts/Lordish-Regular.ttf') format('truetype');
+      src: url('Lordish-Regular.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
     }
-
-    header img {
-      width: 350px; /* make the logo large */
-      max-width: 80vw; /* keeps it from overflowing on mobile */
-      height: auto;
-      margin-bottom: 30px;
-      display: block;
+  header {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* centers everything in header */
+      justify-content: center;
+      text-align: center;
     }
-
+   
     h1 {
       font-family: 'Lordish-Regular', sans-serif;
       font-size: 8rem;
       margin: 0;
     }
+ header img {
+      width: 350px; /* make the logo large */
+      max-width: 80vw; /* keeps it from overflowing on mobile */
+      height: auto;
+      margin: 0 auto 30px auto; /* centers image and adds spacing */
+      display: block;
+    }
 
     p {
-      font-size: 3rem;
+      font-size: 1.8rem;
       margin-top: 10px;
       color: #fff;
     }
