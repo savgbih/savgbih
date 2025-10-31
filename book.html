@@ -65,16 +65,41 @@
     }
 
     .book-btn {
-      background-color: white;
-      color: #F72798;
-      font-weight: bold;
-      font-size: 1.4rem;
-      text-decoration: none;
-      padding: 15px 40px;
-      border-radius: 50px;
-      margin-top: 40px;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
+  background-color: #F72798;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 15px 35px;
+  border-radius: 0;
+  overflow: hidden; /* hides anything that goes outside the button shape */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Add the flame image as a layer behind the text */
+.book-btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/black-flames.png') bottom center / cover no-repeat;
+  opacity: 1;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Make sure text stays visible above flames */
+.book-btn span {
+  display: inline-block;
+  font-size: clamp(1rem, 1.5vw, 1.3rem); 
+  position: relative;
+  z-index: 1;
+}
+
     }
 
     .book-btn:hover {
@@ -83,16 +108,6 @@
       transform: scale(1.08);
     }
 
-    .qr-section {
-      margin-top: 50px;
-    }
-
-    .qr-section img {
-      width: 160px;
-      height: 160px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
 
     footer {
       margin-top: 80px;
