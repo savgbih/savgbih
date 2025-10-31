@@ -19,13 +19,28 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
     }
 
-    h1{
-    font-family: 'Lordish-Regular', sans-serif;
-    font-size:  8rem;
-}
+    @font-face {
+      font-family: 'Lordish-Regular';
+      src: url('fonts/Lordish-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
 
+    header img {
+      width: 350px; /* make the logo large */
+      max-width: 80vw; /* keeps it from overflowing on mobile */
+      height: auto;
+      margin-bottom: 30px;
+      display: block;
+    }
+
+    h1 {
+      font-family: 'Lordish-Regular', sans-serif;
+      font-size: 8rem;
+      margin: 0;
     }
 
     p {
@@ -59,13 +74,6 @@
       color: #F72798;
       transform: scale(1.08);
     }
-    @font-face {
-    font-family: 'Lordish-Regular';
-    src: url('Lordish-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 
     footer {
       margin-top: 80px;
@@ -74,23 +82,38 @@
     }
 
     @media (max-width: 600px) {
-      h1 { font-size: 3rem; }
-      a { font-size: 1.1rem; padding: 12px 25px; }
+      header img {
+        width: 200px;
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+      a {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
+    <!-- 👇 Add your logo file to /images/ -->
+    <img src="images/logo.png" alt="SAVG Nails Logo">
+
     <h1>SAVG Nails</h1>
     <p>Nails with love💅</p>
     <p>Follow me on Instagram<br><a href="https://instagram.com/savg.nails" target="_blank">@savg.nails</a></p>
 
-
     <nav>
       <a href="nailart.html">Nail Art</a>
       <a href="book.html">Book at Glo</a>
-      <a href="savg.html">A Savg Bih</a>
+      <a href="savg.html">A SAVG Bih</a>
     </nav>
+
     <p>Glo Nails & Medspa<br>(312) 285-2539<br>808 N Milwaukee Ave<br>Chicago, IL 60642</p>
   </header>
 
@@ -99,4 +122,3 @@
   </footer>
 </body>
 </html>
-
