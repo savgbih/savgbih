@@ -3,39 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Gallery of nail art by SAVG Nails.">
+  <meta name="description" content="Gallery of custom nail art by Sienna Grace.">
   <title>SAVG Nails | Nail Art</title>
 
   <style>
-    /* ===== FONTS ===== */
     @font-face {
-      font-family: 'Stromboli Art Gallery';
-      src: url('Stromboli Art Gallery.ttf') format('truetype');
+      font-family: 'Blazed';
+      src: url('fonts/Blazed.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
     }
 
     @font-face {
       font-family: 'Elegante Classica';
-      src: url('Elegante Classica.ttf') format('truetype');
+      src: url('fonts/Elegante Classica.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
     }
 
-    /* ===== PAGE BASE ===== */
     body {
       margin: 0;
+      font-family: 'Elegante Classica', sans-serif;
       background-color: #000;
       color: white;
       text-align: center;
-      font-family: 'Elegante Classica', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       padding: 40px 20px;
     }
 
-    /* ===== NAVIGATION ===== */
     nav {
       position: absolute;
       top: 20px;
@@ -55,21 +49,18 @@
       text-decoration: underline;
     }
 
-    /* ===== TITLE ===== */
     h1 {
-      font-family: 'Stromboli Art Gallery', cursive;
-      font-size: 4rem;
+      font-family: 'Blazed', cursive;
+      font-size: 5rem;
       margin-top: 100px;
-      margin-bottom: 60px;
+      color: #F72798;
     }
 
-    /* ===== GALLERY ===== */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 25px;
-      width: 100%;
-      max-width: 1200px;
+      margin-top: 60px;
     }
 
     .gallery img {
@@ -77,7 +68,7 @@
       height: 100%;
       object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -86,17 +77,14 @@
       box-shadow: 0 8px 20px rgba(247, 39, 152, 0.4);
     }
 
-    /* ===== FOOTER ===== */
     footer {
-      margin-top: 80px;
+      margin-top: 60px;
       font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(255,255,255,0.8);
     }
 
-    /* ===== MOBILE ===== */
     @media (max-width: 600px) {
-      h1 { font-size: 2.5rem; margin-top: 80px; }
-      nav a { font-size: 1rem; margin: 0 10px; }
+      h1 { font-size: 3rem; }
     }
   </style>
 </head>
@@ -107,19 +95,14 @@
     <a href="savg.html">A SAVG Bih</a>
   </nav>
 
-  <h1>NAIL ART</h1>
+  <h1>Nail Art</h1>
 
   <div class="gallery">
-    <img src="images/nail1.jpg" alt="Nail art 1">
-    <img src="images/nail2.jpg" alt="Nail art 2">
-    <img src="images/nail3.jpg" alt="Nail art 3">
-    <img src="images/nail4.jpg" alt="Nail art 4">
-    <img src="images/nail5.jpg" alt="Nail art 5">
-    <img src="images/nail6.jpg" alt="Nail art 6">
+    
   </div>
 
   <footer>
-    © 2025 SAVG Nails — All Rights Reserved
+    © 2025 SAVG Nails 
   </footer>
 </body>
 </html>
