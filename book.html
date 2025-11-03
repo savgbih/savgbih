@@ -3,37 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
   <meta name="description" content="Book your nail appointment at Glo with Sienna Grace.">
   <title>SAVG Nails | Book at Glo</title>
 
-
   <style>
+    /* ===== FONTS ===== */
+    @font-face {
+      font-family: 'Blazed';
+      src: url('fonts/Blazed.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Elegante Classica';
+      src: url('fonts/Elegante Classica.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* ===== PAGE BASE ===== */
     body {
       margin: 0;
       font-family: 'Elegante Classica', sans-serif;
-      background-color: #000000;
+      background-color: #000;
       color: white;
       text-align: center;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       padding: 40px 20px;
     }
-    @font-face {
-      font-family: 'Blazed';
-      src: url('Blazed.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-@font-face {
-      font-family: 'Elegante Classica';
-      src: url('Elegante Classica.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-}
+
+    /* ===== NAVIGATION ===== */
     nav {
       position: absolute;
       top: 20px;
@@ -53,10 +56,15 @@
       text-decoration: underline;
     }
 
+    /* ===== TITLE ===== */
     h1 {
-      font-family: 'Blazed', sans-serif;
-      font-size: 4rem;
-      margin-bottom: 10px;
+      font-family: 'Blazed', cursive;
+      font-size: 5rem;
+      margin-top: 120px;
+      margin-bottom: 20px;
+      color: #F72798;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     p {
@@ -65,59 +73,61 @@
       line-height: 1.5;
     }
 
+    /* ===== BUTTON ===== */
     .book-btn {
-  position: relative;
-  background-color: #F72798;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.3rem;
-  padding: 15px 35px;
-  border-radius: 0;
-  overflow: hidden; /* hides anything that goes outside the button shape */
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* Add the flame image as a layer behind the text */
-.book-btn::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('images/black-flames.png') bottom center / cover no-repeat;
-  opacity: 1;
-  z-index: 0;
-  transition: opacity 0.3s ease;
-}
-
-/* Make sure text stays visible above flames */
-.book-btn span {
-  display: inline-block;
-  font-size: clamp(1rem, 1.5vw, 1.3rem); 
-  position: relative;
-  z-index: 1;
-
-
+      position: relative;
+      background-color: #F72798;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 15px 35px;
+      border-radius: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     .book-btn:hover {
-      background-color: #F72798;
-      color: white;
+      background-color: white;
+      color: #F72798;
       transform: scale(1.08);
     }
 
+    /* ===== GALLERY ===== */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 1200px;
+      margin-top: 60px;
+    }
 
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(247, 39, 152, 0.4);
+    }
+
+    /* ===== FOOTER ===== */
     footer {
       margin-top: 80px;
       font-size: 0.9rem;
       color: rgba(255,255,255,0.8);
     }
 
+    /* ===== MOBILE ===== */
     @media (max-width: 600px) {
-      h1 { font-size: 2.5rem; }
+      h1 { font-size: 3rem; }
       p { font-size: 1rem; }
       .book-btn { font-size: 1.1rem; padding: 12px 30px; }
     }
@@ -130,16 +140,22 @@
     <a href="savg.html">A SAVG Bih</a>
   </nav>
 
-  <h1>time for a mani</h1>
+  <h1>TIME FOR A MANI</h1>
   <p>Book your mani/pedi with licensed nail tech Sienna Grace at <strong>Glo Nails & MedSpa</strong> and create something beautiful together.</p>
 
-  <!-- Replace the link below with your real booking URL -->
-  <a href="https://book.squareup.com/appointments/6kov9qeq3mdttt/location/L67VVBEM8098Q/services" target="_blank" class="book-btn"><span>Book Now</span></a>
-<p>Glo Nails & Medspa<br>(312) 285-2539<br>808 N Milwaukee Ave<br>Chicago, IL 60642</p>
-  
+  <a href="https://book.squareup.com/appointments/6kov9qeq3mdttt/location/L67VVBEM8098Q/services" target="_blank" class="book-btn">Book Now</a>
+
+  <p>Glo Nails & Medspa<br>(312) 285-2539<br>808 N Milwaukee Ave<br>Chicago, IL 60642</p>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <div class="gallery">
+    <img src="images/IMG_glofrench.jpeg" alt="Nail art example 1">
+    
+  </div>
 
   <footer>
-    © 2025 SAVG Nails — Appointments at Glo Beauty Lounge
+    © 2025 SAVG Nails 
   </footer>
 </body>
 </html>
+
