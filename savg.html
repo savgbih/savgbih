@@ -3,43 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A Savg Bih — Sienna Grace's signature page.">
-  <title>SAVG Nails | A SAVG Bih</title>
+  <meta name="description" content="A SAVG Bih — by SAVG Nails.">
+  <title>A SAVG Bih | SAVG Nails</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    @font-face {
-      font-family: 'Blazed';
-      src: url('fonts/Blazed.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Elegante Classica';
-      src: url('fonts/Elegante Classica.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
     body {
       margin: 0;
-      font-family: 'Elegante Classica', sans-serif;
-      background-color: #000;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #9A031E, #F72798, #FFBA49);
       color: white;
       text-align: center;
-      padding: 40px 20px;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
     }
 
     nav {
-      position: absolute;
-      top: 20px;
-      width: 100%;
+      background: rgba(0,0,0,0.2);
+      padding: 15px 0;
       text-align: center;
+      backdrop-filter: blur(5px);
     }
 
     nav a {
@@ -54,42 +39,40 @@
       text-decoration: underline;
     }
 
-    h1 {
-      font-family: 'Blazed',sans-serif;
-      font-size: 5rem;
-      margin-top: 120px;
-      margin-bottom: 20px;
-      color: #F72798;
+    main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
 
-    .book-btn {
-      background-color: #F72798;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.3rem;
-      padding: 15px 35px;
-      border-radius: 0;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      margin-top: 60px;
-    }
-
-    .book-btn:hover {
+    .link-btn {
       background-color: white;
       color: #F72798;
+      font-weight: bold;
+      font-size: 1.3rem;
+      text-decoration: none;
+      padding: 15px 40px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .link-btn:hover {
+      background-color: #F72798;
+      color: white;
       transform: scale(1.08);
     }
 
     footer {
-      margin-top: 80px;
+      padding: 20px;
       font-size: 0.9rem;
       color: rgba(255,255,255,0.8);
     }
 
     @media (max-width: 600px) {
-      h1 { font-size: 3rem; }
-      .book-btn { font-size: 1.1rem; padding: 12px 30px; }
+      nav a { font-size: 1rem; }
     }
   </style>
 </head>
@@ -100,12 +83,13 @@
     <a href="book.html">Book at Glo</a>
   </nav>
 
-
-
-  <a href="https://www.instagram.com/savg.nails" target="_blank" class="book-btn">Follow Me on Instagram</a>
+  <main>
+    <!-- ✨ Hidden page link -->
+    <a href="exclusive.html" class="link-btn">Enter the SAVG Zone 🔥</a>
+  </main>
 
   <footer>
-    © 2025 SAVG Nails
+    © 2025 SAVG Nails — A SAVG Bih
   </footer>
 </body>
 </html>
