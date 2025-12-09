@@ -212,19 +212,39 @@ scrollWrapper.addEventListener('mouseenter', () => scrollSpeed = 0);
 scrollWrapper.addEventListener('mouseleave', () => scrollSpeed = 1);
 
 // Infinite seamless scroll
-function autoScroll() {
-  scrollWrapper.scrollLeft += scrollSpeed;
-
-  // Reset scroll when half of the scrollWrapper (the duplicated images) is scrolled
-  if (scrollWrapper.scrollLeft >= scrollWrapper.scrollWidth / 2) {
-    scrollWrapper.scrollLeft = 0;
+function waitForImages(callback) {
+  const imgs = scrollWrapper.getElementsByTagName('img');
+  let loaded = 0;
+  for (let img of imgs) {
+    if (img.complete) {
+      loaded++;
+    } else {
+      img.onload = () => {
+        loaded++;
+        if (loaded === imgs.length) callback();
+      };
+    }
   }
-
-  requestAnimationFrame(autoScroll);
+  if (loaded === imgs.length) callback();
 }
 
-autoScroll();
+function startAutoScroll() {
+  function autoScroll() {
+    scrollWrapper.scrollLeft += scrollSpeed;
+    // Seamless reset
+    if (scrollWrapper.scrollLeft >= scrollWrapper.scrollWidth / 2) {
+      scrollWrapper.scrollLeft = 0;
+    }
+    requestAnimationFrame(autoScroll);
+  }
+  autoScroll();
+}
+
+// Start scrolling after images load
+waitForImages(startAutoScroll);
+
 </script>
+  
 <div class="side-images-container">
   <!-- Left images -->
   <div class="side-images left">
