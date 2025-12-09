@@ -141,11 +141,159 @@
   </nav>
 
   <h1>TIME FOR A MANI</h1>
-  <p>Book your mani/pedi with licensed nail tech Sienna Grace at <strong>Glo Nails & MedSpa</strong> and create something beautiful together.</p>
+  <div class="auto-scroll-gallery">
+  <div class="scroll-wrapper" id="scrollWrapper">
+    <!-- Original images -->
+    <img src="images/glo/Glo1-orangeaura.jpg" alt="Nail 1">
+    <img src="images/glo/Glo10-brown.jpeg" alt="Nail 2">
+    <img src="images/glo/Glo13-greenchrome.jpeg" alt="Nail 3">
+    <img src="images/glo/Glo5-shortred.jpg" alt="Nail 4">
+    <img src="images/glo/Glo14-pinkcateye.jpeg" alt="Nail 5">
+    <img src="images/glo/Glo8-pinkblue.jpeg" alt="Nail 6">
+    <img src="images/glo/Glo11-stars.jpeg" alt="Nail 7">
+    <img src="images/glo/Glo2-blue.jpg" alt="Nail 8">
+    <img src="images/glo/Glo4-chromeFrench.jpg" alt="Nail 9">
+    <img src="images/glo/Glo6-longred.jpg" alt="Nail 10">
+    <img src="images/glo/Glo12-snowman.jpeg" alt="Nail 11">
+    <img src="images/glo/Glo16-silverteal.jpeg" alt="Nail 12">
+
+    <img src="images/glo/Glo1-orangeaura.jpg" alt="Nail 1">
+    <img src="images/glo/Glo10-brown.jpeg" alt="Nail 2">
+    <img src="images/glo/Glo13-greenchrome.jpeg" alt="Nail 3">
+    <img src="images/glo/Glo5-shortred.jpg" alt="Nail 4">
+    <img src="images/glo/Glo14-pinkcateye.jpeg" alt="Nail 5">
+    <img src="images/glo/Glo8-pinkblue.jpeg" alt="Nail 6">
+    <img src="images/glo/Glo11-stars.jpeg" alt="Nail 7">
+    <img src="images/glo/Glo2-blue.jpg" alt="Nail 8">
+    <img src="images/glo/Glo4-chromeFrench.jpg" alt="Nail 9">
+    <img src="images/glo/Glo6-longred.jpg" alt="Nail 10">
+    <img src="images/glo/Glo12-snowman.jpeg" alt="Nail 11">
+    <img src="images/glo/Glo16-silverteal.jpeg" alt="Nail 12">
+
+
+  </div>
+</div>
+
+<style>
+.auto-scroll-gallery {
+  overflow: hidden;
+  width: 100%;
+  margin: 50px 0;
+}
+
+.scroll-wrapper {
+  display: flex;
+  gap: 20px;
+  /* prevent wrapping */
+  flex-wrap: nowrap;
+}
+
+.scroll-wrapper img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  flex-shrink: 0; /* keep image width fixed */
+  transition: transform 0.3s ease;
+}
+
+.scroll-wrapper img:hover {
+  transform: scale(1.05);
+}
+</style>
+
+<script>
+const scrollWrapper = document.getElementById('scrollWrapper');
+let scrollSpeed = 1; // pixels per frame
+
+// Pause on hover
+scrollWrapper.addEventListener('mouseenter', () => scrollSpeed = 0);
+scrollWrapper.addEventListener('mouseleave', () => scrollSpeed = 1);
+
+// Infinite seamless scroll
+function autoScroll() {
+  scrollWrapper.scrollLeft += scrollSpeed;
+
+  // Reset scroll when half of the scrollWrapper (the duplicated images) is scrolled
+  if (scrollWrapper.scrollLeft >= scrollWrapper.scrollWidth / 2) {
+    scrollWrapper.scrollLeft = 0;
+  }
+
+  requestAnimationFrame(autoScroll);
+}
+
+autoScroll();
+</script>
+<div class="side-images-container">
+  <!-- Left images -->
+  <div class="side-images left">
+    <img src="images/glo/Glo3-French.jpg" alt="">
+    <img src="images/glo/Glo7-pumpkin.jpeg" alt="">
+  </div>
+
+  <!-- Your existing center content stays here -->
+  <div class="center-content">
+    <!-- Existing content goes here -->
+     <p>Book your mani/pedi with licensed nail tech Sienna Grace at <strong>Glo Nails & MedSpa</strong> and create something beautiful together.</p>
 
   <a href="https://book.squareup.com/appointments/6kov9qeq3mdttt/location/L67VVBEM8098Q/services" target="_blank" class="book-btn">Book Now</a>
 
   <p>Glo Nails & Medspa<br>(312) 285-2539<br>808 N Milwaukee Ave<br>Chicago, IL 60642</p>
+
+  </div>
+
+  <!-- Right images -->
+  <div class="side-images right">
+    <img src="images/glo/Glo15-green sparkle.jpeg" alt="">
+    <img src="images/glo/Glo9-blackflames.jpeg" alt="">
+  </div>
+</div>
+
+<style>
+.side-images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* space between sides and center */
+  flex-wrap: wrap; /* allows responsive stacking on small screens */
+  margin: 50px 0;
+}
+
+.side-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* space between stacked images */
+}
+
+.side-images img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.side-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Keep your center content styling */
+.center-content {
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Responsive: stack vertically on smaller screens */
+@media (max-width: 800px) {
+  .side-images-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+</style>
+
 
   <!-- ===== GALLERY SECTION ===== -->
   <div class="gallery">
