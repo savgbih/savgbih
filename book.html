@@ -141,8 +141,9 @@
   </nav>
 
   <h1>TIME FOR A MANI</h1>
-  <div class="auto-scroll-gallery">
-  <div class="scroll-wrapper" id="scrollWrapper">
+  <div class="scroll-gallery-wrapper">
+  <button class="scroll-btn left">&#10094;</button>
+  <div class="scroll-gallery" id="scrollWrapper">
     <!-- Original images -->
     <img src="images/glo/Glo1-orangeaura.jpg" alt="Nail 1">
     <img src="images/glo/Glo10-brown.jpeg" alt="Nail 2">
@@ -157,93 +158,95 @@
     <img src="images/glo/Glo12-snowman.jpeg" alt="Nail 11">
     <img src="images/glo/Glo16-silverteal.jpeg" alt="Nail 12">
 
-    <img src="images/glo/Glo1-orangeaura.jpg" alt="Nail 1">
-    <img src="images/glo/Glo10-brown.jpeg" alt="Nail 2">
-    <img src="images/glo/Glo13-greenchrome.jpeg" alt="Nail 3">
-    <img src="images/glo/Glo5-shortred.jpg" alt="Nail 4">
-    <img src="images/glo/Glo14-pinkcateye.jpeg" alt="Nail 5">
-    <img src="images/glo/Glo8-pinkblue.jpeg" alt="Nail 6">
-    <img src="images/glo/Glo11-stars.jpeg" alt="Nail 7">
-    <img src="images/glo/Glo2-blue.jpg" alt="Nail 8">
-    <img src="images/glo/Glo4-chromeFrench.jpg" alt="Nail 9">
-    <img src="images/glo/Glo6-longred.jpg" alt="Nail 10">
-    <img src="images/glo/Glo12-snowman.jpeg" alt="Nail 11">
-    <img src="images/glo/Glo16-silverteal.jpeg" alt="Nail 12">
-
-
   </div>
+      <button class="scroll-btn right">&#10095;</button>
+
 </div>
 
 <style>
-.auto-scroll-gallery {
-  overflow: hidden;
+
+  .scroll-gallery-wrapper {
+  position: relative;
   width: 100%;
-  margin: 50px 0;
+  overflow: hidden;
+  margin: 40px 0;
 }
 
-.scroll-wrapper {
+.scroll-gallery {
   display: flex;
-  gap: 20px;
-  /* prevent wrapping */
-  flex-wrap: nowrap;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
 }
 
-.scroll-wrapper img {
-  width: auto;
-  height: 250px;
+.scroll-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-gallery::-webkit-scrollbar-thumb {
+  background: #f72798;
+  border-radius: 4px;
+}
+
+.scroll-gallery img {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 188px; /* 4:3 aspect ratio */
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  flex-shrink: 0; /* keep image width fixed */
   transition: transform 0.3s ease;
 }
 
-.scroll-wrapper img:hover {
+.scroll-gallery img:hover {
   transform: scale(1.05);
 }
+
+/* Scroll buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(247, 39, 152, 0.8);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.2s ease;
+}
+
+.scroll-btn:hover {
+  background: rgba(247, 39, 152, 1);
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
 </style>
 
 <script>
-const scrollWrapper = document.getElementById('scrollWrapper');
-let scrollSpeed = 1; // pixels per frame
+  const scrollAmount = 260; // pixels to scroll per click
+  const leftBtn = document.querySelector('.scroll-btn.left');
+  const rightBtn = document.querySelector('.scroll-btn.right');
+  const gallery = document.querySelector('.scroll-gallery');
 
-// Pause on hover
-scrollWrapper.addEventListener('mouseenter', () => scrollSpeed = 0);
-scrollWrapper.addEventListener('mouseleave', () => scrollSpeed = 1);
+  leftBtn.addEventListener('click', () => {
+    gallery.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
 
-// Infinite seamless scroll
-function waitForImages(callback) {
-  const imgs = scrollWrapper.getElementsByTagName('img');
-  let loaded = 0;
-  for (let img of imgs) {
-    if (img.complete) {
-      loaded++;
-    } else {
-      img.onload = () => {
-        loaded++;
-        if (loaded === imgs.length) callback();
-      };
-    }
-  }
-  if (loaded === imgs.length) callback();
-}
-
-function startAutoScroll() {
-  function autoScroll() {
-    scrollWrapper.scrollLeft += scrollSpeed;
-    // Seamless reset
-    if (scrollWrapper.scrollLeft >= scrollWrapper.scrollWidth / 2) {
-      scrollWrapper.scrollLeft = 0;
-    }
-    requestAnimationFrame(autoScroll);
-  }
-  autoScroll();
-}
-
-// Start scrolling after images load
-waitForImages(startAutoScroll);
-
+  rightBtn.addEventListener('click', () => {
+    gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
 </script>
+
   
 <div class="side-images-container">
   <!-- Left images -->
