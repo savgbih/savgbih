@@ -5,160 +5,184 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Gallery of custom nail art by Sienna Grace.">
   <title>SAVG Nails | Nail Art</title>
-  </head>
-<body>
-  
+
   <style>
     @font-face {
       font-family: 'Blazed';
       src: url('Blazed.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
     }
-
     @font-face {
       font-family: 'Elegante Classica';
       src: url('Elegante Classica.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
     }
-  
-      margin:0;
-      background:#000;
-      color:#fff;
+
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
       font-family: sans-serif;
     }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 20px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* GALLERY GRID */
     .nail-art-gallery {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
       width: 100%;
       max-width: 1200px;
-      margin: 50px auto;
+      margin: 120px auto 50px;
     }
-    /* Force every cell to same 4:3 size */
+
+    /* Force every item to be the same 4:3 shape */
     .nail-art-gallery > * {
       width: 100%;
       aspect-ratio: 4 / 3;
-      box-sizing: border-box;
       position: relative;
       overflow: hidden;
       border-radius: 10px;
+      box-sizing: border-box;
     }
 
-    /* Standard gallery images */
-    .nail-art-gallery > img {
+    /* REGULAR IMAGES */
+    .gallery-item {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
       transition: transform .3s ease;
     }
-    .nail-art-gallery > img:hover {
+    .gallery-item:hover {
       transform: scale(1.05);
     }
 
-    /* Frame cell with 4 overlays */
-   /* Brown frame background */
-.frame {
-  background: #7a5630;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  padding: 10px;
-}
+    /* FRAMES (brown boxes) */
+    .frame {
+      background: #7a5630;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-/* Layout the PNGs in a row */
-.frame-overlay {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
+    /* OVERLAY BAR — 4 PNGs in a row */
+    .frame-overlay {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+    }
 
-/* Size of the PNGs */
-.frame-overlay img {
-  width: 22%;
-  height: auto;
-  object-fit: contain;
-  transition: transform .3s ease;
-}
+    .frame-overlay img {
+      width: 22%; /* all 4 fit horizontally */
+      height: auto;
+      object-fit: contain;
+      transition: transform .3s ease;
+    }
 
-.frame-overlay img:hover {
-  transform: scale(1.1);
-}
+    .frame-overlay img:hover {
+      transform: scale(1.12);
+    }
 
-
-
-    /* Optional: alternate frame colors */
+    /* Optional: different frame colors */
     .frame-1 { background: #5a3c1e; }
     .frame-2 { background: #7a5630; }
     .frame-3 { background: #a07244; }
-  
+
+    footer {
+      text-align: center;
+      margin: 50px 0;
+      color: #888;
+    }
   </style>
-  
+</head>
+
+<body>
+
+  <!-- NAV -->
   <nav>
     <a href="index.html">Home</a>
     <a href="book.html">Book at Glo</a>
     <a href="savg.html">A SAVG Bih</a>
   </nav>
 
-  <h1></h1>
-<div class="nail-art-gallery">
+  <!-- GRID -->
+  <div class="nail-art-gallery">
 
-  <!-- 9 Main Images -->
-  <img src="images/art/art-aura.jpeg" class="gallery-item">
- 
-  <div class="frame frame-1">
+    <!-- ROW 1 -->
+    <img src="images/art/art-aura.jpeg" class="gallery-item">
+
+    <div class="frame frame-1">
       <div class="frame-overlay">
-    <img src="images/nail/nail-pink-bow.png">
-    <img src="images/nail/nail-pink-kitty.png">
-    <img src="images/nail/nail-pink-ombre.png">
-    <img src="images/nail/nail-ombre-snowflake.png">
-  </div>
-    
-  <img src="images/art/art-matteblack.jpg" class="gallery-item">
-  <img src="images/art/art-cherries.jpeg">
-  <img src="images/art/art-dots.jpeg" class="gallery-item">
-  <img src="images/art/art-drips.jpeg" class="gallery-item">
-  
-  <div class="frame frame-2">
+        <img src="images/nail/nail-pink-bow.png">
+        <img src="images/nail/nail-pink-kitty.png">
+        <img src="images/nail/nail-pink-ombre.png">
+        <img src="images/nail/nail-ombre-snowflake.png">
+      </div>
+    </div>
+
+    <img src="images/art/art-matteblack.jpg" class="gallery-item">
+    <img src="images/art/art-cherries.jpeg" class="gallery-item">
+
+    <!-- ROW 2 -->
+    <img src="images/art/art-dots.jpeg" class="gallery-item">
+    <img src="images/art/art-drips.jpeg" class="gallery-item">
+
+    <div class="frame frame-2">
       <div class="frame-overlay">
-    <img src="images/nail/nail-big-dipper.png">
-    <img src="images/nail/nail-bw-grid.png">
-    <img src="images/nail/nail-bw-eye.png">
-    <img src="images/nail/nail-bw-spiral.png">
-  </div>
+        <img src="images/nail/nail-big-dipper.png">
+        <img src="images/nail/nail-bw-grid.png">
+        <img src="images/nail/nail-bw-eye.png">
+        <img src="images/nail/nail-bw-spiral.png">
+      </div>
+    </div>
 
-  <img src="images/art/art-flowers.jpeg" class="gallery-item">
-   <img src="images/art/art-bts.jpeg" class="gallery-item">
-  <img src="images/art/art-snowombre.jpeg" class="gallery-item">
-  <img src="images/art/art-snowpurple.jpg" class="gallery-item">
+    <img src="images/art/art-flowers.jpeg" class="gallery-item">
 
-  <div class="frame frame-3">
+    <!-- ROW 3 -->
+    <img src="images/art/art-bts.jpeg" class="gallery-item">
+    <img src="images/art/art-snowombre.jpeg" class="gallery-item">
+    <img src="images/art/art-snowpurple.jpg" class="gallery-item">
+
+    <div class="frame frame-3">
       <div class="frame-overlay">
-    <img src="images/nail/nail-tort-butterfly.png">
-    <img src="images/nail/nail-pears.png">
-    <img src="images/nail/nail-neon-flower.png">
-    <div class="overlay empty"></div>
-  </div>
-
-</div>
-
-  <div>
-    <img src="images/icons/green-flower-topright.png" alt=""
-       style="position: fixed; top: 0; right: 0; width: 200px; height: auto; z-index: 10;">
-<img src="images/icons/bw-dots-center.png" alt=""
-       style="position: fixed; top: 400px; left: 0; width: 200px; height: auto; z-index: 10;">
-  <img src="images/icons/blue-red-center.png" alt=""
-       style="position: fixed; bottom: 50px; right: 150px; width: 180px; height: auto; z-index: 10;">
+        <img src="images/nail/nail-tort-butterfly.png">
+        <img src="images/nail/nail-pears.png">
+        <img src="images/nail/nail-neon-flower.png">
+        <img style="opacity:0;"> <!-- empty slot -->
+      </div>
+    </div>
 
   </div>
 
-  <footer>
-    © 2025 SAVG Nails 
-  </footer>
+  <!-- FLOATING DECORATIONS -->
+  <img src="images/icons/green-flower-topright.png" style="position:fixed; top:0; right:0; width:200px; z-index:10;">
+  <img src="images/icons/bw-dots-center.png" style="position:fixed; top:400px; left:0; width:200px; z-index:10;">
+  <img src="images/icons/blue-red-center.png" style="position:fixed; bottom:50px; right:150px; width:180px; z-index:10;">
+
+  <footer>© 2025 SAVG Nails</footer>
+
 </body>
 </html>
