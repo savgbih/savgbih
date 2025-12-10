@@ -93,6 +93,11 @@
   width: 100%;
   margin-top: 50px;
 }
+    .nail-art-gallery > * {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* force identical shape */
+}
+
 
 /* Regular images */
 .gallery-item {
@@ -106,19 +111,27 @@
 .gallery-item:hover {
   transform: scale(1.07);
 }
-
-/* Frames */
 .frame {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  border-radius: 14px;
-  padding: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 8px;
-  position: relative;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.45);
+  background: #7a5630;
+  padding: 8px;              /* reduced padding */
+  border-radius: 12px;
+  overflow: hidden;          /* prevents overspill */
+}
+
+.frame .overlay {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  transform: scale(.9);       /* make smaller */
+  transition: transform .3s ease;
+}
+
+.frame .overlay:hover {
+  transform: scale(1.05);     /* nice zoom */
 }
 
 /* 3 different brown shades */
@@ -126,23 +139,11 @@
 .frame-2 { background: #7a5630; }
 .frame-3 { background: #a07244; }
 
-/* Overlay images inside frames */
-.frame .overlay {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform .3s ease;
-}
 
-/* Hover scale */
-.frame .overlay:hover {
-  transform: scale(1.08);
-}
 
 /* Empty space in frame 3 */
 .overlay.empty {
-  background: rgba(255,255,255,0.15);
+  background: #a07244;
   border-radius: 8px;
 }
 
