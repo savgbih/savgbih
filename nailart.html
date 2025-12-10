@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Gallery of custom nail art by Sienna Grace.">
   <title>SAVG Nails | Nail Art</title>
-
+<body>
+  
   <style>
     @font-face {
       font-family: 'Blazed';
@@ -20,7 +21,7 @@
       font-weight: normal;
       font-style: normal;
     }
-  body {
+  
       margin:0;
       background:#000;
       color:#fff;
@@ -57,35 +58,35 @@
     }
 
     /* Frame cell with 4 overlays */
-    .frame {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      gap: 6px;
-      background: #7a5630; /* brown */
-      padding: 6px;
-      box-sizing: border-box;
-    }
-    
-    .frame-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;              /* space between PNGs */
-  pointer-events: none;
+   /* Brown frame background */
+.frame {
+  background: #7a5630;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
   padding: 10px;
 }
 
-    .frame .overlay:hover {
-      transform: scale(1.04);
-    }
-    .frame-overlay img {
-  width: 22%;            /* small enough so 4 fit side-by-side */
+/* Layout the PNGs in a row */
+.frame-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Size of the PNGs */
+.frame-overlay img {
+  width: 22%;
   height: auto;
   object-fit: contain;
+  transition: transform .3s ease;
+}
+
+.frame-overlay img:hover {
+  transform: scale(1.1);
 }
 
 
@@ -110,34 +111,36 @@
   <img src="images/art/art-aura.jpeg" class="gallery-item">
  
   <div class="frame frame-1">
-    <img src="images/nail/nail-pink-bow.png" class="overlay">
-    <img src="images/nail/nail-pink-kitty.png" class="overlay">
-    <img src="images/nail/nail-pink-ombre.png" class="overlay">
-    <img src="images/nail/nail-ombre-snowflake.png" class="overlay">
+      <div class="frame-overlay">
+    <img src="images/nail/nail-pink-bow.png">
+    <img src="images/nail/nail-pink-kitty.png">
+    <img src="images/nail/nail-pink-ombre.png">
+    <img src="images/nail/nail-ombre-snowflake.png">
   </div>
+    
   <img src="images/art/art-matteblack.jpg" class="gallery-item">
-
-  <img src="images/art/art-cherries.jpeg" class="gallery-item">
+  <img src="images/art/art-cherries.jpeg">
   <img src="images/art/art-dots.jpeg" class="gallery-item">
   <img src="images/art/art-drips.jpeg" class="gallery-item">
   
   <div class="frame frame-2">
-    <img src="images/nail/nail-big-dipper.png" class="overlay">
-    <img src="images/nail/nail-bw-grid.png" class="overlay">
-    <img src="images/nail/nail-bw-eye.png" class="overlay">
-    <img src="images/nail/nail-bw-spiral.png" class="overlay">
+      <div class="frame-overlay">
+    <img src="images/nail/nail-big-dipper.png">
+    <img src="images/nail/nail-bw-grid.png">
+    <img src="images/nail/nail-bw-eye.png">
+    <img src="images/nail/nail-bw-spiral.png">
   </div>
 
   <img src="images/art/art-flowers.jpeg" class="gallery-item">
-    <img src="images/art/art-bts.jpeg" class="gallery-item">
-
+   <img src="images/art/art-bts.jpeg" class="gallery-item">
   <img src="images/art/art-snowombre.jpeg" class="gallery-item">
   <img src="images/art/art-snowpurple.jpg" class="gallery-item">
 
   <div class="frame frame-3">
-    <img src="images/nail/nail-tort-butterfly.png" class="overlay">
-    <img src="images/nail/nail-pears.png" class="overlay">
-    <img src="images/nail/nail-neon-flower.png" class="overlay">
+      <div class="frame-overlay">
+    <img src="images/nail/nail-tort-butterfly.png">
+    <img src="images/nail/nail-pears.png">
+    <img src="images/nail/nail-neon-flower.png">
     <div class="overlay empty"></div>
   </div>
 
