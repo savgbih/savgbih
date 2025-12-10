@@ -20,106 +20,72 @@
       font-weight: normal;
       font-style: normal;
     }
- body {
-    margin: 0;
-    font-family: 'Elegante Classica', sans-serif;
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 40px 20px;
-  }
+  body {
+      margin:0;
+      background:#000;
+      color:#fff;
+      font-family: sans-serif;
+    }
+    .nail-art-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 50px auto;
+    }
+    /* Force every cell to same 4:3 size */
+    .nail-art-gallery > * {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
 
-  nav { position: absolute; top:20px; width:100%; text-align:center; }
-  nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:700; }
-  h1 { font-family:'Blazed'; color:#F72798; margin-top:100px; font-size:4rem; }
+    /* Standard gallery images */
+    .nail-art-gallery > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .3s ease;
+    }
+    .nail-art-gallery > img:hover {
+      transform: scale(1.05);
+    }
 
-   /* ---------- Gallery grid ---------- */
-  .nail-art-gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    width: 100%;
-    margin-top: 50px;
-  }
+    /* Frame cell with 4 overlays */
+    .frame {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 6px;
+      background: #7a5630; /* brown */
+      padding: 6px;
+      box-sizing: border-box;
+    }
 
-  /* Force every direct child cell to the same 4:3 shape */
-  .nail-art-gallery > * {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    box-sizing: border-box;
-  }
+    .frame .overlay {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 6px;
+      transition: transform .25s ease;
+    }
+    .frame .overlay:hover {
+      transform: scale(1.04);
+    }
 
-  /* Regular gallery images (direct children that are <img>) */
-  .nail-art-gallery > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    transition: transform .3s ease;
-  }
-  .nail-art-gallery > img:hover {
-    transform: scale(1.06);
-  }
-
-  /* ---------- Frame cell (2x2 inner grid) ---------- */
-  .frame {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 6px;       /* space between overlays */
-  padding: 6px;   /* smaller padding so frame doesn't grow taller than other images */
-  border-radius: 12px;
-  box-sizing: border-box;
-}
-
-  /* brown variants */
-  .frame-1 { background: #5a3c1e; }
-  .frame-2 { background: #7a5630; }
-  .frame-3 { background: #a07244; }
-
-  /* Each overlay fills its grid cell */
- .frame .overlay {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-
-  /* small internal padding inside each overlay cell so images don't touch the frame edges */
-.frame .overlay-inner {
-  padding: 3px;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-}
-
-  /* Hover effect for overlays (only slightly bigger so they don't overflow the cell) */
-  .frame .overlay:hover {
-    transform: scale(1.04);
-  }
-
-  /* Empty placeholder tile for the one empty overlay you wanted */
-  .overlay.empty {
-    background: rgba(255,255,255,0.12);
-    border-radius: 8px;
-  }
-
-  /* Responsive: reduce gaps on small screens */
-  @media (max-width: 900px) {
-    .nail-art-gallery { gap: 14px; }
-  }
-
-  @media (max-width: 600px) {
-    h1 { font-size: 2.6rem; margin-top: 60px; }
-    .nail-art-gallery { gap: 10px; }
-  }
-
+    /* Optional: alternate frame colors */
+    .frame-1 { background: #5a3c1e; }
+    .frame-2 { background: #7a5630; }
+    .frame-3 { background: #a07244; }
+  
   </style>
-</head>
-<body>
+  
   <nav>
     <a href="index.html">Home</a>
     <a href="book.html">Book at Glo</a>
