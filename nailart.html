@@ -113,12 +113,12 @@
 }
 .frame {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  background: #7a5630;
-  padding: 8px;              /* reduced padding */
+  grid-template-columns: 1fr 1fr;   /* 2 columns */
+  grid-template-rows: 1fr 1fr;      /* 2 rows */
+  gap: 6px;                          /* spacing between cells */
+  padding: 10px;                     /* small padding so frame fits */
+  background: #7a5630;               /* (or your brown shades) */
   border-radius: 12px;
-  overflow: hidden;          /* prevents overspill */
 }
 
 .frame .overlay {
@@ -126,12 +126,22 @@
   height: 100%;
   object-fit: cover;
   border-radius: 6px;
-  transform: scale(.9);       /* make smaller */
-  transition: transform .3s ease;
+
+  /* DO NOT shrink with scale — shrink with padding instead */
+  padding: 4px;
+  box-sizing: border-box;
+
+  transition: transform .25s ease;
 }
 
 .frame .overlay:hover {
-  transform: scale(1.05);     /* nice zoom */
+  transform: scale(1.07);
+}
+
+/* Empty box for Frame 3 */
+.overlay.empty {
+  background: rgba(255,255,255,0.12);
+  border-radius: 6px;
 }
 
 /* 3 different brown shades */
@@ -141,10 +151,6 @@
 
 
 
-/* Empty space in frame 3 */
-.overlay.empty {
-  background: #a07244;
-  border-radius: 8px;
 }
 
 /* Mobile responsive — still 4 across but tighter gap */
