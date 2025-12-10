@@ -65,16 +65,14 @@
 
   /* ---------- Frame cell (2x2 inner grid) ---------- */
   .frame {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 8px;
-    padding: 10px;               /* inner padding so overlays sit in from the colored box */
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.45);
-    align-items: stretch;
-    justify-items: stretch;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;       /* space between overlays */
+  padding: 6px;   /* smaller padding so frame doesn't grow taller than other images */
+  border-radius: 12px;
+  box-sizing: border-box;
+}
 
   /* brown variants */
   .frame-1 { background: #5a3c1e; }
@@ -82,23 +80,21 @@
   .frame-3 { background: #a07244; }
 
   /* Each overlay fills its grid cell */
-  .frame .overlay {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    border-radius: 8px;
-    box-sizing: border-box;
-    transition: transform .25s ease;
-  }
+ .frame .overlay {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
 
   /* small internal padding inside each overlay cell so images don't touch the frame edges */
-  .frame .overlay-inner {
-    padding: 4px;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-  }
+.frame .overlay-inner {
+  padding: 3px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
 
   /* Hover effect for overlays (only slightly bigger so they don't overflow the cell) */
   .frame .overlay:hover {
