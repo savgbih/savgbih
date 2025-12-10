@@ -20,145 +20,106 @@
       font-weight: normal;
       font-style: normal;
     }
-
-    body {
-      margin: 0;
-      font-family: 'Elegante Classica', sans-serif;
-      background-color: #000;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    nav {
-      position: absolute;
-      top: 20px;
-      width: 100%;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    h1 {
-      font-family: 'Blazed';
-      font-size: 5rem;
-      margin-top: 100px;
-      color: #F72798;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 60px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(247, 39, 152, 0.4);
-    }
-
-    footer {
-      margin-top: 60px;
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.8);
-    }
-
-    @media (max-width: 600px) {
-      h1 { font-size: 3rem; }
-    }
-    .nail-art-gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  width: 100%;
-  margin-top: 50px;
-}
-    .nail-art-gallery > * {
-  width: 100%;
-  aspect-ratio: 4 / 3; /* force identical shape */
-}
-
-
-/* Regular images */
-.gallery-item {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  transition: transform .3s ease;
-}
-
-.gallery-item:hover {
-  transform: scale(1.07);
-}
-.frame {
-  display: grid;
-  grid-template-columns: 1fr 1fr;   /* 2 columns */
-  grid-template-rows: 1fr 1fr;      /* 2 rows */
-  gap: 6px;                          /* spacing between cells */
-  padding: 10px;                     /* small padding so frame fits */
-  background: #7a5630;               /* (or your brown shades) */
-  border-radius: 12px;
-}
-
-.frame .overlay {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 6px;
-
-  /* DO NOT shrink with scale — shrink with padding instead */
-  padding: 4px;
-  box-sizing: border-box;
-
-  transition: transform .25s ease;
-}
-
-.frame .overlay:hover {
-  transform: scale(1.07);
-}
-
-/* Empty box for Frame 3 */
-.overlay.empty {
-  background: rgba(255,255,255,0.12);
-  border-radius: 6px;
-}
-
-/* 3 different brown shades */
-.frame-1 { background: #5a3c1e; }
-.frame-2 { background: #7a5630; }
-.frame-3 { background: #a07244; }
-
-
-
-}
-
-/* Mobile responsive — still 4 across but tighter gap */
-@media (max-width: 700px) {
-  .nail-art-gallery {
-    gap: 14px;
+ body {
+    margin: 0;
+    font-family: 'Elegante Classica', sans-serif;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
   }
-}
+
+  nav { position: absolute; top:20px; width:100%; text-align:center; }
+  nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:700; }
+  h1 { font-family:'Blazed'; color:#F72798; margin-top:100px; font-size:4rem; }
+
+   /* ---------- Gallery grid ---------- */
+  .nail-art-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  /* Force every direct child cell to the same 4:3 shape */
+  .nail-art-gallery > * {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    box-sizing: border-box;
+  }
+
+  /* Regular gallery images (direct children that are <img>) */
+  .nail-art-gallery > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    transition: transform .3s ease;
+  }
+  .nail-art-gallery > img:hover {
+    transform: scale(1.06);
+  }
+
+  /* ---------- Frame cell (2x2 inner grid) ---------- */
+  .frame {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px;
+    padding: 10px;               /* inner padding so overlays sit in from the colored box */
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.45);
+    align-items: stretch;
+    justify-items: stretch;
+  }
+
+  /* brown variants */
+  .frame-1 { background: #5a3c1e; }
+  .frame-2 { background: #7a5630; }
+  .frame-3 { background: #a07244; }
+
+  /* Each overlay fills its grid cell */
+  .frame .overlay {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: transform .25s ease;
+  }
+
+  /* small internal padding inside each overlay cell so images don't touch the frame edges */
+  .frame .overlay-inner {
+    padding: 4px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Hover effect for overlays (only slightly bigger so they don't overflow the cell) */
+  .frame .overlay:hover {
+    transform: scale(1.04);
+  }
+
+  /* Empty placeholder tile for the one empty overlay you wanted */
+  .overlay.empty {
+    background: rgba(255,255,255,0.12);
+    border-radius: 8px;
+  }
+
+  /* Responsive: reduce gaps on small screens */
+  @media (max-width: 900px) {
+    .nail-art-gallery { gap: 14px; }
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 2.6rem; margin-top: 60px; }
+    .nail-art-gallery { gap: 10px; }
+  }
 
   </style>
 </head>
